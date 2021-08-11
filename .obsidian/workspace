@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "02-JavaScript/2.08-字符串.md",
+            "file": "02-JavaScript/2.04-函数.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "02-JavaScript/2.08-字符串.md",
+            "file": "02-JavaScript/2.04-函数.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02-JavaScript/2.08-字符串.md",
+                "file": "02-JavaScript/2.04-函数.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,15 +101,15 @@
   },
   "active": "64b793ece923a0f7",
   "lastOpenFiles": [
-    "02-JavaScript/2.08-字符串.md",
-    "02-JavaScript/2.07-排序.md",
+    "02-JavaScript/2.04-函数.md",
+    "02-JavaScript/2.06-数组.md",
     "02-JavaScript/2.06.2-判断数组的方法.md",
+    "02-JavaScript/2.06.1-for of & for in.md",
+    "02-JavaScript/2.08-字符串.md",
     "01-html&CSS/1.01-Html常用标签.md",
+    "02-JavaScript/2.07-排序.md",
     "01-html&CSS/1.03-盒子模型.md",
     "02-JavaScript/2.01-数据类型.md",
-    "02-JavaScript/2.00-JavaScript.md",
-    "README.md",
-    "02-JavaScript/2.05-对象.md",
-    "01-html&CSS/1.00-html&css.md"
+    "02-JavaScript/2.00-JavaScript.md"
   ]
 }
