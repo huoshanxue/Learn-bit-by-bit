@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "前端知识库.md",
+            "file": "README.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端知识库.md",
+                "file": "README.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "a71360d5ead07f03",
   "lastOpenFiles": [
-    "前端知识库.md",
+    "README.md",
+    "02-JavaScript/2.00-JavaScript.md",
+    "02-JavaScript/2.01-数据类型.md",
     "02-JavaScript/2.08-字符串.md",
+    "前端知识库.md",
     "02-JavaScript/2.06.2-判断数组的方法.md",
     "02-JavaScript/2.06.1-for of & for in.md",
     "02-JavaScript/2.04-函数.md",
     "02-JavaScript/2.05-对象.md",
-    "02-JavaScript/2.02-结构类型.md",
-    "02-JavaScript/2.01-数据类型.md",
-    "01-html&CSS/1.00-html&css.md",
-    "01-html&CSS/1.03-盒子模型.md"
+    "02-JavaScript/2.02-结构类型.md"
   ]
 }
