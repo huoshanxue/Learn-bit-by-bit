@@ -4,28 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "64b793ece923a0f7",
+        "id": "a71360d5ead07f03",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "02-JavaScript/2.04-函数.md",
-            "mode": "source"
-          }
-        },
-        "group": "bf74fd247472d3bb"
-      },
-      {
-        "id": "8a714a8b3c3f4a14",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "02-JavaScript/2.04-函数.md",
+            "file": "前端知识库.md",
             "mode": "preview"
           }
-        },
-        "group": "bf74fd247472d3bb"
+        }
       }
     ],
     "direction": "vertical"
@@ -81,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02-JavaScript/2.04-函数.md",
+                "file": "前端知识库.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -99,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "64b793ece923a0f7",
+  "active": "a71360d5ead07f03",
   "lastOpenFiles": [
-    "02-JavaScript/2.04-函数.md",
-    "02-JavaScript/2.06-数组.md",
+    "前端知识库.md",
+    "02-JavaScript/2.08-字符串.md",
     "02-JavaScript/2.06.2-判断数组的方法.md",
     "02-JavaScript/2.06.1-for of & for in.md",
-    "02-JavaScript/2.08-字符串.md",
-    "01-html&CSS/1.01-Html常用标签.md",
-    "02-JavaScript/2.07-排序.md",
-    "01-html&CSS/1.03-盒子模型.md",
+    "02-JavaScript/2.04-函数.md",
+    "02-JavaScript/2.05-对象.md",
+    "02-JavaScript/2.02-结构类型.md",
     "02-JavaScript/2.01-数据类型.md",
-    "02-JavaScript/2.00-JavaScript.md"
+    "01-html&CSS/1.00-html&css.md",
+    "01-html&CSS/1.03-盒子模型.md"
   ]
 }
