@@ -7,6 +7,3 @@
 [2.04-函数](./02-JavaScript/2.04-函数.md)  
 [2.05-对象](./02-JavaScript/2.05-对象.md)  
 [2.06-数组](./02-JavaScript/2.06-数组.md)  
-
-![1.00-html&css](1.00-html&css.md)
-![2.00-JavaScript](2.00-JavaScript.md)
