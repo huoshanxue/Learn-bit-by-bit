@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCan" width="600" height="400"></canvas>
+
+    <script>
+        var myCan = document.getElementById('myCan')
+        var ctx = myCan.getContext('2d');
+
+        ctx.moveTo(100, 100.5); // .5 可以实现
+        ctx.lineTo(300, 100.5);
+        ctx.strokeStyle = 'blue';
+        ctx.setLineDash([5, 10], 10); // 数组描述排列方式 实现，虚线...
+        ctx.lineDashOffset = -20; // 偏移
+          
+        ctx.stroke();
+
+        // 获取虚线排列方式
+        console.log(ctx.getLineDash())
+    </script>
+</body>
+
+</html>

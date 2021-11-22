@@ -1,0 +1,66 @@
+/* 公共样式 */
+
+/* 1 样式重置 */
+
+html, body, ul, li, img, a, p, div, form, input {
+    padding: 0;
+    margin: 0;
+    /* 设置盒模型 */
+    box-sizing: border-box;
+    /* 去除移动端特有的属性 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: '微软雅黑', sans-serif;
+    font-size: 13px;
+}
+
+a, a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    /* 取掉边框阴影 */
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+/* 2 添加的新样式 */
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.m-left10 {
+    margin-left: 10px;
+}
+
+.m-right10 {
+    margin-right: 10px;
+}
+
+.m-top10 {
+    margin-top: 10px;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}

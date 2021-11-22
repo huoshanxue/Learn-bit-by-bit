@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCan" width="600" height="400"></canvas>
+
+    <script>
+        var myCan = document.getElementById('myCan')
+        var ctx = myCan.getContext('2d');
+
+        // ctx.moveTo(100, 100);
+        // ctx.lineTo(350, 100);
+        // ctx.lineWidth = 30;
+        // ctx.strokeStyle = '#fff';
+        // 颜色填充
+        // 线都是由点构成的
+        
+        ctx.lineWidth = 30;
+        for (var i=0; i<250; i++) {
+            ctx.beginPath();
+            ctx.moveTo(10+i-1, 100);
+            ctx.lineTo(101 +i, 100);
+            ctx.strokeStyle = 'rgb('+ i +','+ i +' ,' + i + ')';
+            ctx.stroke(); 
+        }
+        ctx.stroke();
+          
+          
+
+    </script>
+</body>
+
+</html>

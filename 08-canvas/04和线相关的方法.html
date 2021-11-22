@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCan" width="600" height="400" ></canvas>
+    
+    <script>
+        var myCan = document.getElementById('myCan')
+        var ctx = myCan.getContext('2d');
+
+        ctx.beginPath();
+        ctx.moveTo(100, 100.5); // .5 可以实现
+        ctx.lineTo(150,50)
+        ctx.lineTo(300, 100.5);
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 10;
+        ctx.lineCap = 'butt';
+        ctx.lineJoin = 'miter'; // 拐点样式
+          
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(100, 200);
+        ctx.lineTo(150,150)
+        ctx.lineTo(300, 200);
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 20;
+        ctx.lineCap = 'round'; // 设置线条两端样式（相当于帽子）
+        ctx.lineJoin = 'round';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(100, 300);
+        ctx.lineTo(150,250)
+        ctx.lineTo(400, 300);
+        ctx.strokeStyle = 'green';
+        ctx.lineWidth = 20;
+        ctx.lineCap = 'squre';
+        ctx.lineJoin = 'bevel';
+        ctx.stroke();
+          
+    </script>
+</body>
+</html>

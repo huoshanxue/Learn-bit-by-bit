@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="lib/echarts.min.js"></script>
+  <!-- <script src="https://www.jsdelivr.com/package/npm/echarts"></script> -->
+  <title>Document</title>
+</head>
+<body>
+  <div id="echartBox" style="width: 600px;height: 400px;"></div>
+</body>
+
+<script>
+  const myChart = echarts.init(document.getElementById('echartBox'))
+  const option = {
+    title: {
+      text: '学生成绩'
+    },
+    xAxis: {
+      // name: '名称',
+      type: 'category',
+      data: ['张赛季', '李四', '王五', '赵麻子']
+    },
+    yAxis: {},
+    series: [
+      {
+        name: '成绩',
+        type: 'bar',
+        data: [
+        {
+          value: '11',
+          itemStyle: {
+            
+          }
+        },
+        {
+          value: '32',
+          itemStyle: {
+            
+          }
+        },
+        {
+          value: '15',
+          itemStyle: {
+            
+          }
+        },
+        {
+          value: '87',
+          itemStyle: {
+            // borderWidth: 20,
+            borderRadius: [9, 9, 0, 0],
+          }
+        }
+        ],
+        barWidth: '20',
+        itemStyle: {
+          opacity: 0.5,
+          borderRadius: [9,9,0,0]
+        },
+        select: {
+          itemStyle: {
+            color: '#000',
+            opacity: 1
+          }
+        }
+      },
+    ]
+  }
+  myChart.setOption(option)
+</script>
+</html>

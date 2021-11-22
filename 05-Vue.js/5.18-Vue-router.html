@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>hello world</h1>
+      <p>
+        <router-link to="/foo">go to foo</router-link>
+        <router-link to="/bar/zzz">go to bar</router-link>
+        <router-link to="/bar/ttt">go to bar</router-link>
+      </p>
+      <p>
+        <router-view></router-view>
+      </p>
+    </div>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/vue-router/dist/vue-router.js"></script>
+    <script>
+      // 定义组件
+      const Foo = {
+        template: "<div>foo</div>",
+      };
+      const Bar = {
+        template:
+          "<div>bar {{ username }} ---- {{ $route.params }} ---- {{ $route.query }} </div>",
+        data() {
+          return {
+            // username: 'ziran'
+          };
+        },
+        computed: {
+          username() {
+            // console.log(this.$route)
+            return this.$route.params.username;
+          },
+        },
+        // watch: {
+        //     '$route' (to, from) {
+        //         console.log(to, '------', from)
+        //     }
+        // },
+
+        // 1 组件内的守卫
+        beforeRouteEnter(to, from, next) {
+          // console.log('beforeRouteEnter')
+          // next()
+          next((vm) => {
+            console.log(vm.$el.textContent);
+          });
+        },
+        beforeRouteUpdate(to, from, next) {
+          // console.log('beforeRouteUpdate')
+          // next()
+          const change = window.confirm("您确定需要切换Bar吗？");
+          if (change) {
+            next();
+          } else {
+            next(false);
+          }
+        },
+        beforeRouteLeave(to, from, next) {
+          // console.log('beforeRouteLeave')
+          // next()
+          const answer = window.confirm("确定离开Bar组件 ?");
+          if (answer) {
+            next();
+          } else {
+            next(false);
+          }
+        },
+      };
+      // 定义路由
+      const routes = [
+        {
+          path: "/foo",
+          component: Foo,
+          alias: "/foozz", // 路由别名
+        },
+        {
+          path: "/bar/:username",
+          component: Bar,
+
+          // 2 路由独享的守卫
+          beforeEnter: (to, from, next) => {
+            // console.log('beforeEnter')
+            var confirmEnter = window.confirm("确定进入Bar组件？");
+            if (confirmEnter) {
+              next();
+            } else {
+              next(false);
+            }
+          },
+        },
+      ];
+      // 创建Router实例
+      const router = new VueRouter({
+        routes,
+      });
+
+      // 3 全局路由导航守卫
+      router.beforeEach((to, from, next) => {
+        console.log("beforeEach");
+        next();
+      });
+
+      // 全局解析守卫————在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被调用
+      router.beforeResolve((to, from, next) => {
+        console.log("beforeResolve +++");
+        next();
+      });
+
+      // 全局后置钩子
+      router.afterEach((to, from) => {
+        console.log("afterEach");
+      });
+
+      const app = new Vue({
+        router,
+      }).$mount("#app");
+    </script>
+
+    <!-- 
+    完整的导航解析流程
+导航被触发。
+在失活的组件里调用离开守卫。
+调用全局的 beforeEach 守卫。
+在重用的组件里调用 beforeRouteUpdate 守卫 (2.2+)。
+在路由配置里调用 beforeEnter。
+解析异步路由组件。
+在被激活的组件里调用 beforeRouteEnter。
+调用全局的 beforeResolve 守卫 (2.5+)。
+导航被确认。
+调用全局的 afterEach 钩子。
+触发 DOM 更新。
+用创建好的实例调用 beforeRouteEnter 守卫中传给 next 的回调函数。
+
+ -->
+  </body>
+</html>

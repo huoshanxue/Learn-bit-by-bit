@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCan" width="600" height="400"></canvas>
+
+    <script>
+        var myCanvas = document.getElementById('myCan')
+        var ctx = myCan.getContext('2d');
+
+        // 绘制点
+        /* 
+            1 点的尺寸
+            2 以坐标中心绘制点
+        */
+        // 点坐标
+        var coordiate = {
+            x: 100,
+            y: 100
+        }
+        // 点尺寸
+        var dottedSize = 6;
+
+        ctx.moveTo(coordiate.x - dottedSize /2, coordiate.y - dottedSize/2);
+        ctx.lineTo(coordiate.x + dottedSize /2, coordiate.y - dottedSize/2);
+        ctx.lineTo(coordiate.x + dottedSize /2, coordiate.y + dottedSize/2);
+        ctx.lineTo(coordiate.x - dottedSize /2, coordiate.y + dottedSize/2);
+        ctx.closePath();
+        ctx.fill()
+        // ctx.stroke();
+          
+    </script>
+</body>
+
+</html>

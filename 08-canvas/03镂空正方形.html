@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCan" width="600" height="400"></canvas>
+
+    <script>
+        var myCan = document.getElementById('myCan')
+        var ctx = myCan.getContext('2d');
+        
+        ctx.moveTo(100, 100);
+        ctx.lineTo(300, 100);
+        ctx.lineTo(300, 300);
+        ctx.lineTo(100, 300)
+        ctx.closePath();
+          
+        ctx.moveTo(150, 150);
+        ctx.lineTo(150, 250);
+        ctx.lineTo(250, 250);
+        ctx.lineTo(250, 150);
+        ctx.closePath();
+        ctx.fillStyle = 'red'; // 填充颜色
+        ctx.fill();
+        /*
+            1 看一个区域是否填充
+            2 从这个区域拉一条直线
+            3 看这条直线相交的轨迹
+            4 如果顺时针轨迹-1，顺时针轨迹+1
+            5 所有轨迹值计算总和
+            6 如果非零就填充
+        */
+          
+    </script>
+</body>
+
+</html>
