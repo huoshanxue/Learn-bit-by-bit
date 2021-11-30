@@ -176,13 +176,13 @@ background-image: url(../../static/logo.png);
 >
 > [官方文档](https://uniapp.dcloud.io/collocation/pages)
 
-| 属性                                                         | 类型         | 必填 | 描述                   |
-| :----------------------------------------------------------- | :----------- | :--- | :--------------------- |
+| 属性                                                                     | 类型         | 必填 | 描述                   |
+| :----------------------------------------------------------------------- | :----------- | :--- | :--------------------- |
 | [globalStyle](https://uniapp.dcloud.io/collocation/pages?id=globalstyle) | Object       | 否   | 设置默认页面的窗口表现 |
-| [pages](https://uniapp.dcloud.io/collocation/pages?id=pages) | Object Array | 是   | 设置页面路径及窗口表现 |
-| [easycom](https://uniapp.dcloud.io/collocation/pages?id=easycom) | Object       | 否   | 组件自动引入规则       |
-| [tabBar](https://uniapp.dcloud.io/collocation/pages?id=tabbar) | Object       | 否   | 设置底部 tab 的表现    |
-| [condition](https://uniapp.dcloud.io/collocation/pages?id=condition) | Object       | 否   | 启动模式配置           |
+| [pages](https://uniapp.dcloud.io/collocation/pages?id=pages)             | Object Array | 是   | 设置页面路径及窗口表现 |
+| [easycom](https://uniapp.dcloud.io/collocation/pages?id=easycom)         | Object       | 否   | 组件自动引入规则       |
+| [tabBar](https://uniapp.dcloud.io/collocation/pages?id=tabbar)           | Object       | 否   | 设置底部 tab 的表现    |
+| [condition](https://uniapp.dcloud.io/collocation/pages?id=condition)     | Object       | 否   | 启动模式配置           |
 | [subPackages](https://uniapp.dcloud.io/collocation/pages?id=subpackages) | Object Array | 否   | 分包加载配置           |
 | [preloadRule](https://uniapp.dcloud.io/collocation/pages?id=preloadrule) | Object       | 否   | 分包预下载规则         |
 
@@ -236,41 +236,41 @@ background-image: url(../../static/logo.png);
 
 ### （1）应用生命周期
 
-| 函数名               | 说明                                                         |
-| :------------------- | :----------------------------------------------------------- |
-| onLaunch             | 当`uni-app` 初始化完成时触发（全局只触发一次）               |
-| onShow               | 当 `uni-app` 启动，或从后台进入前台显示                      |
-| onHide               | 当 `uni-app` 从前台进入后台                                  |
-| onError              | 当 `uni-app` 报错时触发                                      |
+| 函数名               | 说明                                                                                                               |
+| :------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| onLaunch             | 当`uni-app` 初始化完成时触发（全局只触发一次）                                                                     |
+| onShow               | 当 `uni-app` 启动，或从后台进入前台显示                                                                            |
+| onHide               | 当 `uni-app` 从前台进入后台                                                                                        |
+| onError              | 当 `uni-app` 报错时触发                                                                                            |
 | onUniNViewMessage    | 对 `nvue` 页面发送的数据进行监听，可参考 [nvue 向 vue 通讯](https://uniapp.dcloud.io/use-weex?id=nvue-向-vue-通讯) |
-| onUnhandledRejection | 对未处理的 Promise 拒绝事件监听函数（2.8.1+）                |
-| onPageNotFound       | 页面不存在监听函数                                           |
-| onThemeChange        | 监听系统主题变化                                             |
+| onUnhandledRejection | 对未处理的 Promise 拒绝事件监听函数（2.8.1+）                                                                      |
+| onPageNotFound       | 页面不存在监听函数                                                                                                 |
+| onThemeChange        | 监听系统主题变化                                                                                                   |
 
 
 
 ### （2）页面生命周期
 
-| 函数名                              | 说明                                                         |
-| :---------------------------------- | :----------------------------------------------------------- |
+| 函数名                              | 说明                                                                                                                                      |
+| :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
 | onLoad                              | 监听页面加载，其参数为上个页面传递的数据，参数类型为Object（用于页面传参），参考[示例](https://uniapp.dcloud.io/api/router?id=navigateto) |
-| onShow                              | 监听页面显示。页面每次出现在屏幕上都触发，包括从下级页面点返回露出当前页面 |
-| onReady                             | 监听页面初次渲染完成。注意如果渲染速度快，会在页面进入动画完成前触发 |
-| onHide                              | 监听页面隐藏                                                 |
-| onUnload                            | 监听页面卸载                                                 |
-| onResize                            | 监听窗口尺寸变化                                             |
-| onPullDownRefresh                   | 监听用户下拉动作，一般用于下拉刷新，参考[示例](https://uniapp.dcloud.io/api/ui/pulldown) |
-| onReachBottom                       | 页面滚动到底部的事件（不是scroll-view滚到底），常用于下拉下一页数据。具体见下方注意事项 |
-| onTabItemTap                        | 点击 tab 时触发，参数为Object，具体见下方注意事项            |
-| onShareAppMessage                   | 用户点击右上角分享                                           |
-| onPageScroll                        | 监听页面滚动，参数为Object                                   |
-| onNavigationBarButtonTap            | 监听原生标题栏按钮点击事件，参数为Object                     |
-| onBackPress                         | 监听页面返回                                                 |
-| onNavigationBarSearchInputChanged   | 监听原生标题栏搜索输入框输入内容变化事件                     |
-| onNavigationBarSearchInputConfirmed | 监听原生标题栏搜索输入框搜索事件，用户点击软键盘上的“搜索”按钮时触发。 |
-| onNavigationBarSearchInputClicked   | 监听原生标题栏搜索输入框点击事件                             |
-| onShareTimeline                     | 监听用户点击右上角转发到朋友圈                               |
-| onAddToFavorites                    | 监听用户点击右上角收藏                                       |
+| onShow                              | 监听页面显示。页面每次出现在屏幕上都触发，包括从下级页面点返回露出当前页面                                                                |
+| onReady                             | 监听页面初次渲染完成。注意如果渲染速度快，会在页面进入动画完成前触发                                                                      |
+| onHide                              | 监听页面隐藏                                                                                                                              |
+| onUnload                            | 监听页面卸载                                                                                                                              |
+| onResize                            | 监听窗口尺寸变化                                                                                                                          |
+| onPullDownRefresh                   | 监听用户下拉动作，一般用于下拉刷新，参考[示例](https://uniapp.dcloud.io/api/ui/pulldown)                                                  |
+| onReachBottom                       | 页面滚动到底部的事件（不是scroll-view滚到底），常用于下拉下一页数据。具体见下方注意事项                                                   |
+| onTabItemTap                        | 点击 tab 时触发，参数为Object，具体见下方注意事项                                                                                         |
+| onShareAppMessage                   | 用户点击右上角分享                                                                                                                        |
+| onPageScroll                        | 监听页面滚动，参数为Object                                                                                                                |
+| onNavigationBarButtonTap            | 监听原生标题栏按钮点击事件，参数为Object                                                                                                  |
+| onBackPress                         | 监听页面返回                                                                                                                              |
+| onNavigationBarSearchInputChanged   | 监听原生标题栏搜索输入框输入内容变化事件                                                                                                  |
+| onNavigationBarSearchInputConfirmed | 监听原生标题栏搜索输入框搜索事件，用户点击软键盘上的“搜索”按钮时触发。                                                                    |
+| onNavigationBarSearchInputClicked   | 监听原生标题栏搜索输入框点击事件                                                                                                          |
+| onShareTimeline                     | 监听用户点击右上角转发到朋友圈                                                                                                            |
+| onAddToFavorites                    | 监听用户点击右上角收藏                                                                                                                    |
 
 
 
@@ -285,7 +285,7 @@ background-image: url(../../static/logo.png);
 		{
 			"path": "pages/index",
 			"style": {
-				"navigationBarTitleText": "金迅教育 · 路由配置",
+				"navigationBarTitleText": "路由配置",
 				"navigationBarBackgroundColor": "#FFFFFF",
 				"navigationBarTextStyle": "black",
 				"backgroundColor": "#FFFFFF",
@@ -295,7 +295,7 @@ background-image: url(../../static/logo.png);
 		{
 			"path": "pages/user",
 			"style": {
-				"navigationBarTitleText": "金迅教育 · 路由配置",
+				"navigationBarTitleText": "路由配置",
 				"navigationBarBackgroundColor": "#FFFFFF",
 				"navigationBarTextStyle": "black",
 				"backgroundColor": "#FFFFFF",
@@ -313,14 +313,14 @@ background-image: url(../../static/logo.png);
 >
 > 框架以栈的形式管理当前所有页面， 当发生路由切换的时候，页面栈的表现如下：
 
-| 路由方式   | 页面栈表现                        | 触发时机                                                     |
-| ---------- | --------------------------------- | ------------------------------------------------------------ |
-| 初始化     | 新页面入栈                        | uni-app 打开的第一个页面                                     |
-| 打开新页面 | 新页面入栈                        | 调用 API  `uni.navigateTo`、<br />使用组件 `<navigator open-type="navigate" />` |
-| 页面重定向 | 当前页面出栈，新页面入栈          | 调用 API  [uni.redirectTo](https://uniapp.dcloud.io/api/router?id=redirectto) 、<br />使用组件 |
+| 路由方式   | 页面栈表现                        | 触发时机                                                                                                                                                   |
+| ---------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 初始化     | 新页面入栈                        | uni-app 打开的第一个页面                                                                                                                                   |
+| 打开新页面 | 新页面入栈                        | 调用 API  `uni.navigateTo`、<br />使用组件 `<navigator open-type="navigate" />`                                                                            |
+| 页面重定向 | 当前页面出栈，新页面入栈          | 调用 API  [uni.redirectTo](https://uniapp.dcloud.io/api/router?id=redirectto) 、<br />使用组件                                                             |
 | 页面返回   | 页面不断出栈，直到目标返回页      | 调用 API  [uni.navigateBack](https://uniapp.dcloud.io/api/router?id=navigateback)  、<br />使用组件 、<br />用户按左上角返回按钮、安卓用户点击物理back按键 |
-| Tab 切换   | 页面全部出栈，只留下新的 Tab 页面 | 调用 API  [uni.switchTab](https://uniapp.dcloud.io/api/router?id=switchtab) 、<br />使用组件 、<br />用户切换 Tab |
-| 重加载     | 页面全部出栈，只留下新的页面      | 调用 API  [uni.reLaunch](https://uniapp.dcloud.io/api/router?id=relaunch) 、<br />使用组件 |
+| Tab 切换   | 页面全部出栈，只留下新的 Tab 页面 | 调用 API  [uni.switchTab](https://uniapp.dcloud.io/api/router?id=switchtab) 、<br />使用组件 、<br />用户切换 Tab                                          |
+| 重加载     | 页面全部出栈，只留下新的页面      | 调用 API  [uni.reLaunch](https://uniapp.dcloud.io/api/router?id=relaunch) 、<br />使用组件                                                                |
 
 
 
@@ -382,7 +382,7 @@ onLoad: function (option) { //option为object类型，会序列化上个页面�
 			"pages": [{
 					"path": "index",
 					"style": {
-						"navigationBarTitleText": "金迅教育 · 新闻中心",
+						"navigationBarTitleText": "新闻中心",
 						"navigationBarBackgroundColor": "#FFFFFF",
 						"navigationBarTextStyle": "black",
 						"backgroundColor": "#FFFFFF"
@@ -403,7 +403,7 @@ onLoad: function (option) { //option为object类型，会序列化上个页面�
 				{
 					"path": "userList",
 					"style": {
-						"navigationBarTitleText": "金迅教育 · 活动报名",
+						"navigationBarTitleText": "活动报名",
 						"navigationBarBackgroundColor": "#FFFFFF",
 						"navigationBarTextStyle": "black",
 						"backgroundColor": "#FFFFFF",
@@ -492,29 +492,29 @@ switch(uni.getSystemInfoSync().platform){
 > - \#ifndef：if not defined 除了某平台均存在
 > - **%PLATFORM%**：平台名称
 
-| 条件编译写法                                             | 说明                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| #ifdef **APP-PLUS** 需条件编译的代码 #endif              | 仅出现在 App 平台下的代码                                    |
-| #ifndef **H5** 需条件编译的代码 #endif                   | 除了 H5 平台，其它平台均存在的代码                           |
+| 条件编译写法                                             | 说明                                                                             |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| #ifdef **APP-PLUS** 需条件编译的代码 #endif              | 仅出现在 App 平台下的代码                                                        |
+| #ifndef **H5** 需条件编译的代码 #endif                   | 除了 H5 平台，其它平台均存在的代码                                               |
 | #ifdef **H5** \|\| **MP-WEIXIN** 需条件编译的代码 #endif | 在 H5 平台或微信小程序平台存在的代码（这里只有\|\|，不可能出现&&，因为没有交集） |
 
 > **%PLATFORM%** **可取值如下：**
 
-| 值                      | 平台                                                         |
-| :---------------------- | :----------------------------------------------------------- |
-| APP-PLUS                | App                                                          |
-| APP-PLUS-NVUE           | App nvue                                                     |
-| H5                      | H5                                                           |
-| MP-WEIXIN               | 微信小程序                                                   |
-| MP-ALIPAY               | 支付宝小程序                                                 |
-| MP-BAIDU                | 百度小程序                                                   |
-| MP-TOUTIAO              | 字节跳动小程序                                               |
-| MP-QQ                   | QQ小程序                                                     |
-| MP-360                  | 360小程序                                                    |
+| 值                      | 平台                                                                 |
+| :---------------------- | :------------------------------------------------------------------- |
+| APP-PLUS                | App                                                                  |
+| APP-PLUS-NVUE           | App nvue                                                             |
+| H5                      | H5                                                                   |
+| MP-WEIXIN               | 微信小程序                                                           |
+| MP-ALIPAY               | 支付宝小程序                                                         |
+| MP-BAIDU                | 百度小程序                                                           |
+| MP-TOUTIAO              | 字节跳动小程序                                                       |
+| MP-QQ                   | QQ小程序                                                             |
+| MP-360                  | 360小程序                                                            |
 | MP                      | 微信小程序/支付宝小程序/百度小程序/字节跳动小程序/QQ小程序/360小程序 |
-| QUICKAPP-WEBVIEW        | 快应用通用(包含联盟、华为)                                   |
-| QUICKAPP-WEBVIEW-UNION  | 快应用联盟                                                   |
-| QUICKAPP-WEBVIEW-HUAWEI | 快应用华为                                                   |
+| QUICKAPP-WEBVIEW        | 快应用通用(包含联盟、华为)                                           |
+| QUICKAPP-WEBVIEW-UNION  | 快应用联盟                                                           |
+| QUICKAPP-WEBVIEW-HUAWEI | 快应用华为                                                           |
 
 
 
