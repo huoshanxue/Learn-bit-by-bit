@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        canvas {
-            border: 1px solid #000;
-        }
+      canvas {
+        border: 1px solid #000;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <canvas id="myCan" width="600" height="400"></canvas>
 
     <script>
-        var myCanvas = document.getElementById('myCan')
-        var ctx = myCan.getContext('2d');
+      var myCanvas = document.getElementById("myCan");
+      var ctx = myCan.getContext("2d");
 
-        // 绘制坐标系
-        /* 
+      // 绘制坐标系
+      /* 
             1 确定原点
             2 确定距离画布边上的距离
             3 确定坐标系长度
             4 确定箭头 大小 是个等腰三角形 10px
             5 绘制箭头填充
         */
-        var space = 20;
-        var arrowSize = 10;
-        // 原点
-        var canvasWidth = ctx.canvas.width;
-        var canvasHeight = ctx.canvas.height;
-        var x0 = space;
-        var y0 = canvasHeight - space;
-        // 绘制x轴
-        ctx.beginPath(); // 开始新的路径
-        ctx.moveTo(x0, y0);
-        ctx.lineTo(canvasWidth - space, y0);
-        ctx.lineTo(canvasWidth - space - arrowSize, y0 - arrowSize / 2);
-        ctx.lineTo(canvasWidth - space - arrowSize, y0 + arrowSize / 2);
-        ctx.lineTo(canvasWidth - space, y0);
-        ctx.fill();
-        ctx.stroke();
-        // 绘制y轴
-        ctx.beginPath();
-        ctx.moveTo(x0, y0);
-        ctx.lineTo(x0, space);
-        ctx.lineTo(x0 + arrowSize / 2, space + arrowSize);
-        ctx.lineTo(x0 - arrowSize / 2, space + arrowSize);
-        ctx.lineTo(x0, space);
-        ctx.fill();
-        ctx.stroke();
+      var space = 20;
+      var arrowSize = 10;
+      // 原点
+      var canvasWidth = ctx.canvas.width;
+      var canvasHeight = ctx.canvas.height;
+      var x0 = space;
+      var y0 = canvasHeight - space;
+      // 绘制x轴
+      ctx.beginPath(); // 开始新的路径
+      ctx.moveTo(x0, y0);
+      ctx.lineTo(canvasWidth - space, y0);
+      ctx.lineTo(canvasWidth - space - arrowSize, y0 - arrowSize / 2);
+      ctx.lineTo(canvasWidth - space - arrowSize, y0 + arrowSize / 2);
+      ctx.lineTo(canvasWidth - space, y0);
+      ctx.fill();
+      ctx.stroke();
+      // 绘制y轴
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.lineTo(x0, space);
+      ctx.lineTo(x0 + arrowSize / 2, space + arrowSize);
+      ctx.lineTo(x0 - arrowSize / 2, space + arrowSize);
+      ctx.lineTo(x0, space);
+      ctx.fill();
+      ctx.stroke();
     </script>
-</body>
-
+  </body>
 </html>

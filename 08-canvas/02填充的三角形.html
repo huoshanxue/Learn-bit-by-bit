@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <canvas id="myCan" width="600" height="400"></canvas>
 
     <script>
-        var myCan = document.getElementById('myCan')
-        var ctx = myCan.getContext('2d');
+      var myCan = document.getElementById("myCan");
+      var ctx = myCan.getContext("2d");
 
-        // 绘制三角形
-        ctx.moveTo(100, 100);
-        ctx.lineTo(200, 100);
-        ctx.lineTo(200, 200);
-        // ctx.lineTo(100, 100);
-        ctx.closePath(); // 关闭路径，自动闭合
-          
-        ctx.lineWidth = 20;
-        /*
+      // 绘制三角形
+      ctx.moveTo(100, 100);
+      ctx.lineTo(200, 100);
+      ctx.lineTo(200, 200);
+      // ctx.lineTo(100, 100);
+      ctx.closePath(); // 关闭路径，自动闭合
+
+      ctx.lineWidth = 20;
+      /*
             起始点 和 lineTo 的结束的无法完全的闭合，有缺角。
             使用 canvas 的自动闭合
         */
-        ctx.stroke();
-        // ctx.fill()
-          
+      ctx.stroke();
+      // ctx.fill()
     </script>
-</body>
-
+  </body>
 </html>
